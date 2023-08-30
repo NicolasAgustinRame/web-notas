@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/icons8-notes-96.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Notes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="perfil">
+            <div id="fecha">Miercoles 31 de Agosto</div>
+            <h1>Hola, Nicolas!</h1>
+            <span>Cumple tus metas diarias!!</span>
+        </div>
+        <div class="agregar-tarea">
+            <input type="text" id="input" placeholder="agregar una tarea">
+            <i id="enter" class="fas fa-plus-circle"></i>
+        </div>
+        <div class="seccion-tarea">
+            <h3>Estas son tus tareas Pendientes</h3>
+            <ul id="lista">
+                <li>
+                    <i class="far fa-circle co" data="realizado" id="0"></i>
+                    <p class="text">hacer la tarea en español </p>
+                    <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
