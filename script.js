@@ -5,8 +5,10 @@ const botonEnter = document.querySelector('#enter')
 const check = 'fa-check-circle'
 const uncheck = 'fa-circle'
 const lineTrougth = 'line-through'
-let id = 0
-const LIST = []
+let id 
+let LIST
+
+
 
 //fecha
 const FECHA = new Date();
@@ -42,6 +44,7 @@ botonEnter.addEventListener('click', () => {
             eliminado: false,
         })
     };
+    localStorage.setItem('TODO', JSON.stringify(LIST))
     input.value=''
     id++
 })
@@ -58,6 +61,7 @@ document.addEventListener('keyup', function(event){
                 eliminado: false,
             })
         };
+        localStorage.setItem('TODO', JSON.stringify(LIST))
         input.value=''
         id++
     }
@@ -75,6 +79,7 @@ lista.addEventListener('click', function(event){
     {
         tareaEliminada(element);
     }
+    localStorage.setItem('TODO', JSON.stringify(LIST))
 })
 
 function tareaRealizada(element){
@@ -87,4 +92,21 @@ function tareaRealizada(element){
 function tareaEliminada(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
     LIST[element.id].eliminado = true;
+}
+
+let data = localStorage.getItem('TODO')
+if(data){
+    LIST = JSON.parse(data)
+    id = LIST.length
+    cargarLista(LIST)
+}
+else {
+    LIST = []
+    id = 0
+}
+
+function cargarLista(array) {
+    array.forEach(function(item){
+        agregarTarea(item.nombre,item.id,item.realizado,item.eliminado)
+    })
 }
