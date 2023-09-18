@@ -6,8 +6,11 @@ const check = 'fa-check-circle'
 const uncheck = 'fa-circle'
 const lineTrougth = 'line-through'
 let id = 0
+const LIST = []
 
-
+//fecha
+const FECHA = new Date();
+fecha.innerHTML = FECHA.toLocaleDateString('es-MX',{weekday: 'long', month:'long', day:'numeric'} )
 
 //funcion agregar tarea
 function agregarTarea(tarea, id, realizado, eliminado) {
@@ -32,6 +35,12 @@ botonEnter.addEventListener('click', () => {
     const tarea = input.value
     if(tarea) {
         agregarTarea(tarea,id, false, false)
+        LIST.push({
+            nombre: tarea,
+            id: id,
+            realizado: false,
+            eliminado: false,
+        })
     };
     input.value=''
     id++
@@ -42,6 +51,12 @@ document.addEventListener('keyup', function(event){
         const tarea = input.value
         if(tarea) {
             agregarTarea(tarea,id, false, false)
+            LIST.push({
+                nombre: tarea,
+                id: id,
+                realizado: false,
+                eliminado: false,
+            })
         };
         input.value=''
         id++
@@ -66,8 +81,10 @@ function tareaRealizada(element){
     element.classList.toggle(check)
     element.classList.toggle(uncheck)
     element.parentNode.querySelector('.text').classList.toggle(lineTrougth)
+    LIST[element.id].realizado = LIST[element.id].realizado ? false : true
 }
 
 function tareaEliminada(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
+    LIST[element.id].eliminado = true;
 }
