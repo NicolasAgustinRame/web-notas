@@ -16,7 +16,6 @@ fecha.innerHTML = FECHA.toLocaleDateString('es-MX',{weekday: 'long', month:'long
 
 //funcion agregar tarea
 function agregarTarea(tarea, id, realizado, eliminado) {
-
     if(eliminado){
         return
     }
@@ -35,35 +34,36 @@ function agregarTarea(tarea, id, realizado, eliminado) {
 
 botonEnter.addEventListener('click', () => {
     const tarea = input.value
-    if(tarea) {
-        agregarTarea(tarea,id, false, false)
+    if(tarea){
+        agregarTarea(tarea,id,false,false)
         LIST.push({
-            nombre: tarea,
-            id: id,
-            realizado: false,
-            eliminado: false,
+            nombre : tarea,
+            id : id,
+            realizado : false,
+            eliminado : false
         })
-    };
-    localStorage.setItem('TODO', JSON.stringify(LIST))
-    input.value=''
-    id++
+        localStorage.setItem('TODO',JSON.stringify(LIST))
+        id++
+        input.value = ''
+    }
 })
 
 document.addEventListener('keyup', function(event){
-    if(event.key == 'Enter'){
+    if (event.key=='Enter'){
         const tarea = input.value
         if(tarea) {
-            agregarTarea(tarea,id, false, false)
-            LIST.push({
-                nombre: tarea,
-                id: id,
-                realizado: false,
-                eliminado: false,
-            })
-        };
-        localStorage.setItem('TODO', JSON.stringify(LIST))
-        input.value=''
+            agregarTarea(tarea,id,false,false)
+        LIST.push({
+            nombre : tarea,
+            id : id,
+            realizado : false,
+            eliminado : false
+        })
+        localStorage.setItem('TODO',JSON.stringify(LIST))
+        input.value = ''
         id++
+        console.log(LIST)
+        }
     }
 })
 
@@ -91,7 +91,7 @@ function tareaRealizada(element){
 
 function tareaEliminada(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
-    LIST[element.id].eliminado = true;
+    LIST[element.id].eliminado = true
 }
 
 let data = localStorage.getItem('TODO')
