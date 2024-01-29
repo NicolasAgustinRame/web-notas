@@ -14,11 +14,13 @@
     --blue-dark: #154295;
     --oscuro: #002036;
     --rojo: #ff0021;
+    --negro: #272727;
+    --amarillo: #fffb5b;
 }
 
 body
 {
-    background: linear-gradient(to bottom, var(--green-dark), var(--blue-ligth));
+    background: var(--negro);
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
@@ -47,19 +49,19 @@ body::-webkit-scrollbar-thumb
 /*Perfil*/
 .perfil h1
 {
-    color: var(--white);
+    color: var(--amarillo);
     
 }
 
 .perfil span
 {
-    color: var(--white);
+    color: var(--amarillo);
     letter-spacing: 1px;
 }
 
 #fecha
 {   
-    color: var(--white);
+    color: var(--amarillo);
     padding: 50px 0 5px 0;
 }
 
@@ -88,7 +90,7 @@ body::-webkit-scrollbar-thumb
 .agregar-tarea i
 {
     font-size: 35px;
-    color: var(--blue-ligth);
+    color: var(--negro);
 }
 
 .agregar-tarea i:hover 
@@ -100,7 +102,7 @@ body::-webkit-scrollbar-thumb
 .agregar-tarea input::placeholder 
 {
     font-size: 1.3rem;
-    color: var(--blue-ligth);
+    color: var(--negro);
     text-align: center;
 }
 
@@ -108,20 +110,20 @@ body::-webkit-scrollbar-thumb
 
 .seccion-tarea h3 
 {
-    color: var(--white);
+    color: var(--amarillo);
     margin-bottom: 20px;
 }
 
 .seccion-tarea li 
 {
     display: flex;
-    background-color: var(--oscuro);
+    background-color: var(--white);
     border-radius: 15px;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
     margin: 5px 0;
-    color: var(--white);
+    color: var(--negro);
 }
 
 .seccion-tarea i 
