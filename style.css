@@ -7,15 +7,14 @@
 
 :root 
 {
-    --white: #fafafb;
+    --white: #efd2ed;
     --green-light: #c4efb4;
-    --green-dark: #17a79d;
-    --blue-ligth: #1772a5;
-    --blue-dark: #154295;
+    --green-dark: #5fc100;
+    --morado-dark: #3f3056;
     --oscuro: #002036;
     --rojo: #ff0021;
-    --negro: #12171f;
-    --amarillo: #91a2fa;
+    --negro: #3f3056;
+    --amarillo: #fff8ff;
 }
 
 body
@@ -28,13 +27,13 @@ body
 body::-webkit-scrollbar
 {
     width: 10px;
-    background: linear-gradient(to bottom, var(--green-dark), var(--blue-ligth));
+    background: linear-gradient(to bottom, var(--morado-dark), var(--morado-dark));
     border-right: 2px ;
 }
 
 body::-webkit-scrollbar-thumb
 {
-    background-color: var(--blue-dark);
+    background-color: var(--morado-dark);
     border-radius: 50px;
 }
 
