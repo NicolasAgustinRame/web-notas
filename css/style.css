@@ -1,12 +1,10 @@
-*
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root 
-{
+:root {
     --white: #efd2ed;
     --green-light: #c4efb4;
     --green-dark: #5fc100;
@@ -17,28 +15,24 @@
     --amarillo: #fff8ff;
 }
 
-body
-{
+body {
     background: var(--negro);
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
-body::-webkit-scrollbar
-{
+body::-webkit-scrollbar {
     width: 10px;
     background: linear-gradient(to bottom, var(--morado-dark), var(--morado-dark));
-    border-right: 2px ;
+    border-right: 2px;
 }
 
-body::-webkit-scrollbar-thumb
-{
+body::-webkit-scrollbar-thumb {
     background-color: var(--morado-dark);
     border-radius: 50px;
 }
 
-.container 
-{
+.container {
     max-width: 80%;
     width: 400px;
     height: 600px;
@@ -46,20 +40,17 @@ body::-webkit-scrollbar-thumb
 }
 
 /*Perfil*/
-.perfil h1
-{
+.perfil h1 {
     color: var(--amarillo);
-    
+
 }
 
-.perfil span
-{
+.perfil span {
     color: var(--amarillo);
     letter-spacing: 1px;
 }
 
-#fecha
-{   
+#fecha {
     color: var(--amarillo);
     padding: 50px 0 5px 0;
     font-size: 20px;
@@ -71,56 +62,70 @@ body::-webkit-scrollbar-thumb
 }
 
 /*Agregar tarea*/
-.agregar-tarea
-{
+.agregar-tarea {
     background-color: var(--white);
     border-radius: 15px;
     height: 70px;
     display: flex;
     align-items: center;
-    padding: 10px ;
+    padding: 10px;
     gap: 70px;
-    margin: 40px 0;    
+    margin: 40px 0;
+    border: none;
 }
 
-.agregar-tarea input
-{
+.agregar-tarea input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
     width: 100%;
     height: 100%;
     border-radius: 8px;
     border: none;
     background-color: var(--white);
+    outline: none;
+    /* Añadir esta línea */
+    box-shadow: none;
 }
 
-.agregar-tarea i
-{
+.agregar-tarea i {
     font-size: 35px;
     color: var(--negro);
 }
 
-.agregar-tarea i:hover 
-{
+.agregar-tarea i:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.agregar-tarea input::placeholder 
-{
+.agregar-tarea input::placeholder {
     font-size: 1.3rem;
     color: var(--negro);
     text-align: center;
 }
 
+.agregar-tarea input:focus {
+    border: none;
+    outline: none;
+    /* Añadir esta línea */
+    box-shadow: none
+}
+
+.agregar-tarea input:active {
+    border: none;
+    outline: none;
+    /* Añadir esta línea */
+    box-shadow: none
+}
+
+
 /*Seccion tarea*/
 
-.seccion-tarea h3 
-{
+.seccion-tarea h3 {
     color: var(--amarillo);
     margin-bottom: 20px;
 }
 
-.seccion-tarea li 
-{
+.seccion-tarea li {
     display: flex;
     background-color: var(--white);
     border-radius: 15px;
@@ -131,23 +136,20 @@ body::-webkit-scrollbar-thumb
     color: var(--negro);
 }
 
-.seccion-tarea i 
-{
+.seccion-tarea i {
     font-size: 25px;
 }
 
-.seccion-tarea i:hover{
+.seccion-tarea i:hover {
     color: var(--green-dark);
     cursor: pointer;
-}   
+}
 
-.seccion-tarea ul p
-{
+.seccion-tarea ul p {
     font-size: 1.2rem;
 }
 
-.line-through 
-{
+.line-through {
     text-decoration: line-through;
     color: var(--rojo);
-} 
+}

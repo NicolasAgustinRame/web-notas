@@ -9,8 +9,6 @@ const lineTrougth = 'line-through'
 let id 
 let LIST
 
-
-
 //fecha
 const FECHA = new Date();
 fecha.innerHTML = FECHA.toLocaleDateString('es-MX',{weekday: 'long', month:'long', day:'numeric'} )
@@ -30,10 +28,7 @@ function currentTime() {
     let watch = document.querySelector('#hora')
     watch.innerHTML = time;
 }
-
 setInterval(currentTime, 1000)
-
-
 
 //funcion agregar tarea
 function agregarTarea(tarea, id, realizado, eliminado) {

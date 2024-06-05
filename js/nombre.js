@@ -1,7 +1,5 @@
 const nombreElement = document.getElementById("nombre");
 
-
-
 function agregarNombre(nombreValor){
     const nuevoContenido = `Hola, ${nombreValor}!`;
     nombreElement.innerText = nuevoContenido;
