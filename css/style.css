@@ -140,14 +140,21 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px;
 }
 
-.seccion-tarea i:hover {
+.seccion-tarea ul p {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.fa-trash:hover {
+    color: var(--rojo);
+    cursor: pointer;
+}
+
+.fa-circle:hover {
     color: var(--green-dark);
     cursor: pointer;
 }
 
-.seccion-tarea ul p {
-    font-size: 1.2rem;
-}
 
 .line-through {
     text-decoration: line-through;
