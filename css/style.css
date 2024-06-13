@@ -5,18 +5,18 @@
 }
 
 :root {
-    --white: #efd2ed;
+    --white: #fff;
     --green-light: #c4efb4;
     --green-dark: #5fc100;
     --morado-dark: #3f3056;
     --oscuro: #002036;
     --rojo: #ff0021;
-    --negro: #3f3056;
-    --amarillo: #fff8ff;
+    --negro: #140f07;
+    --amarillo: #fff;
 }
 
 body {
-    background: var(--negro);
+    background-image: url("../images/v1016-b-09.jpg");
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
